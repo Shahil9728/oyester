@@ -25,6 +25,10 @@ hbs.registerPartials(partialpath);
 
 app.use(express.urlencoded({ extended: false }));
 
+app.get('/', (req, res) => {
+    res.render('signup.hbs')
+})
+
 app.get('/signup', (req, res) => {
     res.render('signup.hbs')
 })
